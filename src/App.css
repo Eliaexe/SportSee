@@ -1,3 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   background-color: antiquewhite;
+}
+
+.chartsContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+
+section {
+  width: 835px;
+}
+
+.mini-container {
+  width: 258px;
+  height: 263px;
+}
+
+.bottonRow{
+  display: flex;
 }

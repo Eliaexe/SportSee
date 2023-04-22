@@ -8,12 +8,14 @@ import { RadialBarChart, RadialBar, Legend, ResponsiveContainer } from 'recharts
     lineHeight: '24px',
   };
 export default function Score (props) {
-      console.log(props.data * 100);
+      // console.log(props.data * 100);
       const useThis = [{ 'name': 'Score', 'uv': props.data * 100 }]
-      console.log(useThis);
+      // console.log(useThis);
     //   const data = props.data
     return (
-        <ResponsiveContainer width="100%" aspect={3}>
+      <div className='mini-container'>
+
+        <ResponsiveContainer width="100%" aspect={1}>
             <RadialBarChart cx="50%" cy="50%" innerRadius="10%" outerRadius="80%" barSize={10} data={useThis}>
             <RadialBar
                 minAngle={15}
@@ -25,6 +27,8 @@ export default function Score (props) {
             <Legend iconSize={10} layout="vertical" verticalAlign="middle" wrapperStyle={style} />
             </RadialBarChart>
         </ResponsiveContainer>
+
+        </div>
     );
         
     

@@ -28,20 +28,26 @@ function App() {
   return (
     <main className="App">
       {data && (
-        <div>
+        <div className='chartsContainer'>
           <Greetings name={userData.firstName} objective={true} />
-          <section>
-          <DailyActivity data={data[3].sessions} />
-          <Statistic data={statisticData}/>
-          <SessionTime data={sessionsTimeData}/>
-          <Score data={todayScoreData} />
-          <Nutrition
-            calories={nutritionData.calorieCount}
-            proteines={nutritionData.proteinCount}
-            glucides={nutritionData.carbohydrateCount}
-            lipides={nutritionData.lipidCount}
-            />
+
+          <section className='bigColomn'>
+            <DailyActivity data={data[3].sessions} />
+            <div className='bottonRow'>
+              <SessionTime data={sessionsTimeData}/>
+              <Statistic data={statisticData}/>
+              <Score data={todayScoreData} />
+            </div>
           </section>
+          <section className='smallColomn'>
+            <Nutrition
+                calories={nutritionData.calorieCount}
+                proteines={nutritionData.proteinCount}
+                glucides={nutritionData.carbohydrateCount}
+                lipides={nutritionData.lipidCount}
+                />
+          </section>
+
         </div>
       )}
       <p>ciao</p>

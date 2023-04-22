@@ -13,16 +13,16 @@ export default function Statistic (props) {
 // console.log(useThis);
 
     return (
-        <div>
-        <h3>Stats</h3>
-        <ResponsiveContainer width="100%" aspect={3}>
-            <RadarChart cx="50%" cy="50%" outerRadius="80%" data={useThis}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="kind" />
-            <PolarRadiusAxis />
-            <Radar name="Stats" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-            </RadarChart>
-        </ResponsiveContainer>
+        <div className='mini-container'>
+            <h3>Stats</h3>
+            <ResponsiveContainer width="100%" aspect={1}>
+                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={useThis}>
+                <PolarGrid />
+                <PolarAngleAxis dataKey="kind" />
+                <PolarRadiusAxis />
+                <Radar name="Stats" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                </RadarChart>
+            </ResponsiveContainer>
         </div>
     );
   }

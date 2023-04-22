@@ -1,12 +1,15 @@
+import '../styles/Greetings.css'
 
 function Greetings(props) {
     return (
-        <div>
-            <h1>Bonjour {props.name}</h1>
+        <div className='greetings'>
+            <div className='hiUser'>
+                <h1>Bonjour</h1><h1 className='nameRed'> {props.name}</h1>
+            </div>
             {props.objective ? (
-                <h2>Félicitations ! Vous avez explosé vos objectifs hier 👏</h2>
+                <p>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
             ) : (
-                <h2>Today you can do better than yesterday</h2>
+                <p>Today you can do better than yesterday</p>
             )}
         </div>
     );

@@ -1,0 +1,35 @@
+.nutrition{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nutrient-container{
+    display: flex;
+    align-items: center;
+    height: 124px;
+    width: 258px;
+    border-radius: 5px;
+    
+    background-color: #FBFBFB;
+    padding:  32px;
+}
+
+.nutrient-container img {
+    margin-right: 24px;
+    width: 60px;
+    height: 60px;
+}
+
+.nutrient-container .bigBold{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.nutrient-container .gray {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+}
