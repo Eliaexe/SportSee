@@ -1,4 +1,12 @@
 .daily-chart-container{
     background-color:  #FBFBFB;
-    padding: 43px;
+    padding: 24px 32px;
+    width: 835px;
+    border-radius: 5px;
+    margin-bottom: 30px;
 }
+
+.daily-chart-container text {
+    position: absolute;
+}
+

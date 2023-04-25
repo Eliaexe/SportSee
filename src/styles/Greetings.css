@@ -1,4 +1,6 @@
-
+.greetings {
+    margin-bottom: 80px;
+}
 .greetings h1 {
     font-size: 48px;
     font-weight: 500;
@@ -9,7 +11,6 @@
 
 .hiUser{
     margin-bottom: 40px;
-
 }
 
 .nameRed {

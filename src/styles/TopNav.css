@@ -1,0 +1,17 @@
+.topnav{
+    background-color: #020203;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.topnav img {
+    height: 60px;
+}
+
+.topnav h2 {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 24px;
+}

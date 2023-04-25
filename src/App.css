@@ -6,24 +6,50 @@
 }
 
 body {
-  background-color: antiquewhite;
+  background-color: #FFFFFF;
 }
 
-.chartsContainer{
+.chartsContainer {
   display: flex;
-  flex-direction: row;
+  max-height: 1000px;
+  padding: 80px 100px;
+  flex-direction: column;
 }
-
 
 section {
   width: 835px;
 }
 
+.sections-container{
+  display: flex;
+}
+
 .mini-container {
   width: 258px;
   height: 263px;
+  border-radius: 5px;
 }
 
-.bottonRow{
+.bottomRow{
   display: flex;
+  justify-content: space-between;
+}
+
+.app-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.containerrrr{
+  display: flex;
+  flex-direction: row;
+}
+
+.bigColomn{
+  margin-right: 30px;
 }
