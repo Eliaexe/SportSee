@@ -11,13 +11,10 @@ body {
 
 .chartsContainer {
   display: flex;
-  max-height: 1000px;
-  padding: 80px 100px;
   flex-direction: column;
-}
-
-section {
-  width: 835px;
+  justify-content: center;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
 .sections-container{
@@ -52,4 +49,6 @@ section {
 
 .bigColomn{
   margin-right: 30px;
+  width: 835px;
+
 }

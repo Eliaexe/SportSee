@@ -18,6 +18,21 @@ function DailyActivity(props) {
     calories: 'Calories brûlées (kCal)',
   };
 
+  const renderTooltipContent = ({ payload, label }) => {
+    if (payload && payload.length > 0) {
+      return (
+        <div className='daily-custom-tooltip' style={{backgroundColor: '#E60000', width: '70px', height: '120px'}}>
+          {payload.map((entry, index) => (
+            <p key={`item-${index}`} >
+              {` ${entry.value} ${entry.name.match(/\((.*)\)/)[1]} `}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <div className='daily-chart-container'>
       <Text x="100%" y="100%" textAnchor="middle" fontSize={20} fontWeight={700} fill="#666">
@@ -39,7 +54,7 @@ function DailyActivity(props) {
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           <YAxis orientation='right' tickCount={3} />
           <XAxis dataKey="day" />
-          <Tooltip />
+          <Tooltip content={renderTooltipContent} />
           <Legend 
             verticalAlign='top' 
             align='right' 

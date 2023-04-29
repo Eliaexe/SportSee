@@ -10,3 +10,16 @@
     position: absolute;
 }
 
+.daily-custom-tooltip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: none;
+}
+
+.daily-custom-tooltip p {
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+}

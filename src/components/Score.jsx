@@ -15,7 +15,7 @@ export default function Score(props) {
   return (
     <div className='mini-container'>
       <ResponsiveContainer width="100%" aspect={1}>
-        <RadialBarChart cx="50%" cy="50%" innerRadius={90} outerRadius={90} barSize={10} startAngle={10} endAngle={360} data={data}>
+        <RadialBarChart cx="50%" cy="50%" innerRadius={90} outerRadius={90} barSize={10} startAngle={10} endAngle={300} data={data}>
           <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={false} dataKey="uv" fill="#E60000" />
           <Legend iconSize={0} layout="vertical" verticalAlign="top" align='left' wrapperStyle={style} />
         </RadialBarChart>

@@ -11,14 +11,21 @@ export default function Statistic (props) {
         useThis.push({'value': e.value, 'kind': kindData[e.kind]})
     });
 
+    const order = ["intensity", "speed", "strength", "endurance", "energy", "cardio"];
+
+    const orderedData = useThis.sort((a, b) => {
+    return order.indexOf(a.kind) - order.indexOf(b.kind);
+    });
+
+    console.log(orderedData);
+
     return (
         <div className='mini-container statistics-chart-container'>
-            <h3>Stats</h3>
-            <ResponsiveContainer width="100%" aspect={1}>
-                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={useThis}>
-                    <PolarGrid />
-                    <PolarAngleAxis dataKey="kind" axisLine={false} />
-                    <Radar name="Stats" dataKey="value" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.6} />
+            <ResponsiveContainer width="100%" aspect={0.95}>
+                <RadarChart cx="48%" cy="50%" outerRadius="65%" data={useThis}>
+                    <PolarGrid gridType="polygon" radialLines={false} strokeWidth='2'/>                    
+                    <PolarAngleAxis dataKey="kind" axisLine={false}  tick={{ fill: "white", fontSize: 14 }}/>
+                    <Radar name="Stats" dataKey="value" stroke="#FF0101B2" fill="#FF0101B2" fillOpacity={0.7} />
                 </RadarChart>
             </ResponsiveContainer>
         </div>
