@@ -38,7 +38,7 @@ function DailyActivity(props) {
       <Text x="100%" y="100%" textAnchor="middle" fontSize={20} fontWeight={700} fill="#666">
         Activité quotidienne
       </Text>
-      <ResponsiveContainer width="100%" aspect={3}>
+      <ResponsiveContainer width="100%" aspect={2}>
         <BarChart
           width={600}
           height={300}

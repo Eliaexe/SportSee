@@ -13,11 +13,9 @@ export default function Statistic (props) {
 
     const order = ["intensity", "speed", "strength", "endurance", "energy", "cardio"];
 
-    const orderedData = useThis.sort((a, b) => {
-    return order.indexOf(a.kind) - order.indexOf(b.kind);
+    useThis.sort((a, b) => {
+        return order.indexOf(a.kind) - order.indexOf(b.kind);
     });
-
-    console.log(orderedData);
 
     return (
         <div className='mini-container statistics-chart-container'>

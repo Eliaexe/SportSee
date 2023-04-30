@@ -4,9 +4,9 @@ const GetTheData = async (user) => {
     let urlUserData = url + user + '/';
     const resUserData = await fetch(urlUserData);
     const resPerformanceData = await fetch(urlUserData + 'performance/');
-    // const resStatistics = 
     const resSessionTime = await fetch(urlUserData + 'average-sessions/');
     const resDailyActivity = await fetch(urlUserData + 'activity/');
+
     if (resUserData.ok && resPerformanceData.ok && resSessionTime && resDailyActivity) {
       const userData = await resUserData.json();
       const performanceData = await resPerformanceData.json();
@@ -16,6 +16,7 @@ const GetTheData = async (user) => {
     } else {
       throw new Error('Error: ' + resUserData.status + ', ' + resPerformanceData.status);
     }
+    
   } catch (err) {
     console.error(err);
   }

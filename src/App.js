@@ -26,7 +26,7 @@ function App() {
   let statisticData = data && data[1]
   let sessionsTimeData = data && data[2].sessions
   let todayScoreData = data && data[0].todayScore
-// console.log(data);
+  console.log(data, todayScoreData);
   return (
     <div className='app-container'>
       <TopNav />

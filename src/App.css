@@ -13,8 +13,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 30px;
   margin: 0 auto;
+  padding: 0 auto;
+  width: 80%;
 }
 
 .sections-container{
@@ -51,4 +52,15 @@ body {
   margin-right: 30px;
   width: 835px;
 
+}
+
+@media (min-width: 1023px) {
+  .bigColomn{
+    margin-right: 15px;
+    width: 67%;
+  }
+  .mini-container{
+    width: 32%;
+    height: auto;
+  }
 }
