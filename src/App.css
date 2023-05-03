@@ -51,13 +51,12 @@ body {
 .bigColomn{
   margin-right: 30px;
   width: 835px;
-
 }
 
 @media (min-width: 1023px) {
   .bigColomn{
     margin-right: 15px;
-    width: 67%;
+    width: 70%;
   }
   .mini-container{
     width: 32%;

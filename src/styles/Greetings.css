@@ -5,12 +5,12 @@
     font-size: 48px;
     font-weight: 500;
     text-align: left;
-
     display: inline;
 }
 
 .hiUser{
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .nameRed {

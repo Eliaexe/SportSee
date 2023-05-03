@@ -12,13 +12,10 @@
 .session-title {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
-    
+    font-size: 13px;
+    line-height: 20px;
     color: #FFFFFF;
-    
     mix-blend-mode: normal;
     opacity: 0.5;
-
-    margin: 29px 0px 5px 14px;
+    margin: 20px 0px 0px 5px;
 }

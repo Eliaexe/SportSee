@@ -5,20 +5,19 @@ import '../styles/Score.css'
 export default function Score(props) {
   const data = [{ name: 'de votre objectif', uv: props.data * 100 }];
   const style = {
-    top: 55,
+    top: 45,
     left: 5,
-    lineHeight: '30px',
+    lineHeight: '20px',
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-
   };
   data[0].name = <div><h3 className='percentual'>{data[0].uv + '% '}</h3><h3 className='objectif'>{data[0].name}</h3></div>
   return (
     <div className='mini-container'>
       <ResponsiveContainer width="100%" aspect={1}>
         <RadialBarChart cx="50%" cy="50%" 
-                        innerRadius={90} 
+                        innerRadius={70} 
                         outerRadius={90} 
                         barSize={10} 
                         startAngle={90} 
