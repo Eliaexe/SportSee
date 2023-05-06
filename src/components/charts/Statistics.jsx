@@ -1,14 +1,20 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts';
-import "../styles/Statistic.css"
+import "./../../styles/Statistic.css"
+
+/*
+* Render the chart for overall score regarding the user's sporting abilities
+* @param {Object} the data to display
+* @retuns {JSX.Element} chart
+*
+*/
 
 export default function Statistic (props) {
 
-    const data = props.data
-    const valueData = data.data
-    const kindData = data.kind
+    //formatting the legend with the appropriate qualities in the right order
+    const {data, kind} = props.data
     let useThis = []
-    valueData.forEach(e => {
-        useThis.push({'value': e.value, 'kind': kindData[e.kind]})
+    data.forEach(e => {
+        useThis.push({'value': e.value, 'kind': kind[e.kind]})
     });
 
     const order = ["intensity", "speed", "strength", "endurance", "energy", "cardio"];

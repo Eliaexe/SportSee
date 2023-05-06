@@ -1,10 +1,27 @@
 import React from 'react';
-import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, Bar, BarChart, ResponsiveContainer, Text } from 'recharts';
-import '../styles/DailyActivity.css';
+import { 
+  XAxis, 
+  YAxis, 
+  CartesianGrid, 
+  Tooltip, 
+  Legend, 
+  Bar, 
+  BarChart, 
+  ResponsiveContainer, 
+  Text } from 'recharts';
+import './../../styles/DailyActivity.css';
+
+/*
+* Render the chart for daily kcal and weight information
+* @param {Object} the data to display
+* @retuns {JSX.Element} chart
+*
+*/
 
 function DailyActivity(props) {
   let data = props.data;
 
+  // formatting the day for the chart x axis
   if (data) {
     data.forEach(e => {
       if (e.day && e.day.match(/^\d{4}-\d{2}-\d{2}$/)) {
@@ -35,10 +52,18 @@ function DailyActivity(props) {
 
   return (
     <div className='daily-chart-container'>
-      <Text x="100%" y="100%" textAnchor="middle" fontSize={20} fontWeight={700} fill="#666">
+      <Text 
+        x="100%" 
+        y="100%" 
+        textAnchor="middle" 
+        fontSize={20} 
+        fontWeight={700} 
+        fill="#666">
         Activité quotidienne
       </Text>
-      <ResponsiveContainer width="100%" aspect={2}>
+      <ResponsiveContainer 
+        width="100%" 
+        aspect={2}>
         <BarChart
           width={600}
           height={300}
@@ -51,10 +76,16 @@ function DailyActivity(props) {
           }}
           barGap={8}
         >
-          <CartesianGrid strokeDasharray="3 3" vertical={false} />
-          <YAxis orientation='right' tickCount={3} />
-          <XAxis dataKey="day" />
-          <Tooltip content={renderTooltipContent} />
+          <CartesianGrid 
+            strokeDasharray="3 3" 
+            vertical={false} />
+          <YAxis 
+            orientation='right' 
+            tickCount={3} />
+          <XAxis 
+            dataKey="day" />
+          <Tooltip 
+            content={renderTooltipContent} />
           <Legend 
             verticalAlign='top' 
             align='right' 
@@ -64,8 +95,18 @@ function DailyActivity(props) {
             labelStyle={{ fontSize: '14px', color: '#666' }} 
             height={50} 
           />
-          <Bar dataKey="kilogram" name={legendDataNames['kilogram']} fill="#282D30" barSize={7} radius={[10, 10, 0, 0]} />
-          <Bar dataKey="calories" name={legendDataNames['calories']} fill="#E60000" barSize={7} radius={[10, 10, 0, 0]} />
+          <Bar 
+            dataKey="kilogram" 
+            name={legendDataNames['kilogram']} 
+            fill="#282D30" 
+            barSize={7} 
+            radius={[10, 10, 0, 0]} />
+          <Bar 
+            dataKey="calories" 
+            name={legendDataNames['calories']}
+            fill="#E60000" 
+            barSize={7} 
+            radius={[10, 10, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </div>

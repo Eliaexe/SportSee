@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import GetTheData from './components/Fetch';
-import Nutrition from './components/Nutrition';
+import GetTheData from './components/utils/Fetch';
+import Nutrition from './components/charts/Nutrition';
 import Greetings from './components/Greetings';
-import DailyActivity from './components/DailyActivity'
-import Statistic from './components/Statistics';
-import SessionTime from './components/SessionTime';
+import DailyActivity from './components/charts/DailyActivity'
+import Statistic from './components/charts/Statistics';
+import SessionTime from './components/charts/SessionTime';
 import TopNav from './components/TopNav';
-import Score from './components/Score';
+import Score from './components/charts/Score';
 import './App.css';
 import LeftNav from './components/LeftNav';
-
+// import GetLocalData from './components/utils/LocalData';
 function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async (user) => {
-      const result = await GetTheData(user);
-      setData(result);
+      const APIresult = await GetTheData(user);
+      // const localResult = await GetLocalData();
+      setData(APIresult);
     };
+
     fetchData(12);
   }, []);
 
@@ -26,7 +28,6 @@ function App() {
   let statisticData = data && data[1]
   let sessionsTimeData = data && data[2].sessions
   let todayScoreData = data && data[0].todayScore
-  console.log(data, todayScoreData);
   return (
     <div className='app-container'>
       <TopNav />

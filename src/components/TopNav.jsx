@@ -1,13 +1,13 @@
 import '../styles/TopNav.css'
 
-export default function TopNav(params) {
+export default function TopNav() {
     return(
         <nav className='topnav'>
             <img src="img/logo.png" alt="" />
-            <h2>Accueil</h2>
-            <h2>Profil</h2>
-            <h2>Réglage</h2>
-            <h2>Communauté</h2>
+            <a href='/'>Accueil</a>
+            <a href='/'>Profil</a>
+            <a href='/'>Réglage</a>
+            <a href='/'>Communauté</a>
         </nav>
     )
 }
