@@ -14,7 +14,7 @@ const GetTheData = async (user) => {
     const resSessionTimeData = await fetch(urlUserData + 'average-sessions/');
     const resDailyActivityData = await fetch(urlUserData + 'activity/');
 
-    if (resUserData.ok && resPerformanceData.ok && resSessionTimeData && resDailyActivityData) {
+    if (resUserData.ok && resPerformanceData.ok && resSessionTimeData.ok && resDailyActivityData.ok) {
       const userData = await resUserData.json();
       const performanceData = await resPerformanceData.json();
       const sessionTimeData = await resSessionTimeData.json();

@@ -7,8 +7,7 @@ import {
   Legend, 
   Bar, 
   BarChart, 
-  ResponsiveContainer, 
-  Text } from 'recharts';
+  ResponsiveContainer } from 'recharts';
 import './../../styles/DailyActivity.css';
 
 /*
@@ -52,15 +51,16 @@ function DailyActivity(props) {
 
   return (
     <div className='daily-chart-container'>
-      <Text 
-        x="100%" 
-        y="100%" 
-        textAnchor="middle" 
-        fontSize={20} 
-        fontWeight={700} 
-        fill="#666">
+      <div
+        style={{
+          position: 'absolute',
+          fontSize: '20px',
+          fontWeight: 700,
+          color: '#666',
+        }}
+      >
         Activité quotidienne
-      </Text>
+      </div>
       <ResponsiveContainer 
         width="100%" 
         aspect={2}>
