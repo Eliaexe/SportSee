@@ -1,6 +1,5 @@
 .daily-chart-container{
     background-color:  #FBFBFB;
-    padding: 24px 32px;
     width: 100%;
     border-radius: 5px;
     margin-bottom: 30px;
@@ -24,7 +23,7 @@
     font-weight: 500;
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 1020px) {
     .daily-chart-container{
         padding: 5px 0px 0px 15px;
         height: 53%;

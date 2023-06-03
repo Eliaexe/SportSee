@@ -12,7 +12,7 @@ import './../../styles/Score.css'
 export default function Score(props) {
   const objectifData = [{ name: 'de votre objectif', uv: props.data * 100 }];
   const style = {
-    top: 70,
+    top: 58,
     left: 5,
     lineHeight: '20px',
     width: '100%',

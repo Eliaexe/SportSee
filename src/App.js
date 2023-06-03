@@ -20,14 +20,16 @@ function App() {
       setData(APIresult);
     };
 
-    fetchData(12); // select user 12 or user 18
+    fetchData(18); // select user 12 or user 18
   }, []);
 
-  let userData = data && data[0].userInfos
-  let nutritionData = data && data[0].keyData;
-  let statisticData = data && data[1]
-  let sessionsTimeData = data && data[2].sessions
-  let todayScoreData = data && data[0].todayScore
+  let userData = data?.[0]?.userInfos;
+  let nutritionData = data?.[0]?.keyData;
+  let statisticData = data?.[1];
+  let sessionsTimeData = data?.[2]?.sessions;  
+  let todayScoreData = data[0]?.todayScore ?? data[0]?.score;
+
+  
   return (
     <div className='app-container'>
       <TopNav />
