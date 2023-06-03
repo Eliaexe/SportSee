@@ -20,7 +20,7 @@ function App() {
       setData(APIresult);
     };
 
-    fetchData(12); // select user 12 or user 18
+    fetchData(18); // select user 12 or user 18
   }, []);
 
   let userData = data && data[0].userInfos
